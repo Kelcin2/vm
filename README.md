@@ -11,8 +11,6 @@ Note:
 
 How to install
 
-``You can run as administrator when executing below installation command and after installing you don't need run as administrator when executing `vm` command anymore``
-
 ```
 pip install .
 ```
