@@ -6,9 +6,11 @@ import pathlib
 import sys
 
 build_version = "v1.0.0"
+github = "https://github.com/Kelcin2/vm"
 support_components = {
     "JAVA": ["JVM_HOME", "JVM_SYMLINK", "JRE_SYMLINK"],
     "Gradle": ["GVM_HOME", "GVM_SYMLINK"],
+    "Groovy": ["GROVM_HOME", "GROVM_SYMLINK"],
     "Node": ["NVM_HOME", "NVM_SYMLINK"],
     "Kubectl": ["KVM_HOME", "KVM_SYMLINK"],
     "Maven": ["MVM_HOME", "MVM_SYMLINK"]
@@ -206,13 +208,15 @@ def show_help():
         if k in ["JAVA"]:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%\\bin` to env variable `PATH`. Alternatively you can set env variable `{}` for creating corresponding symlink and add `%{}%\\bin` to env variable `PATH`"
                   .format(k, v[0], v[1], v[1], v[2], v[2]))
-        elif k in ["Gradle", "Maven"]:
+        elif k in ["Gradle", "Maven", "Groovy"]:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%\\bin` to env variable `PATH`."
                   .format(k, v[0], v[1], v[1]))
         else:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%` to env variable `PATH`."
                   .format(k, v[0], v[1], v[1]))
         print()
+
+    print("Any Bug or Suggestion Please Commit to Github {} .\n".format(github))
 
 
 def show_build_version():
