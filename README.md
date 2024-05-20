@@ -33,6 +33,7 @@ All Components Supported by Version Management
 |  ----  | ----  | ----  |
 | JAVA  | ``JVM_HOME`` ``JVM_SYMLINK`` | ``JRE_SYMLINK`` |
 | Gradle  | ``GVM_HOME`` ``GVM_SYMLINK`` | N/A |
+| Groovy  | ``GROVM_HOME`` ``GROVM_SYMLINK`` | N/A |
 | Node  | ``NVM_HOME`` ``NVM_SYMLINK`` | N/A |
 | Kubectl  | ``KVM_HOME`` ``KVM_SYMLINK`` | N/A |
 | Maven  | ``MVM_HOME`` ``MVM_SYMLINK`` | N/A |
