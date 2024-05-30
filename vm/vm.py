@@ -5,7 +5,7 @@ import os
 import pathlib
 import sys
 
-build_version = "v1.0.0"
+build_version = "v1.0.1"
 github = "https://github.com/Kelcin2/vm"
 support_components = {
     "JAVA": ["JVM_HOME", "JVM_SYMLINK", "JRE_SYMLINK"],
@@ -13,7 +13,8 @@ support_components = {
     "Groovy": ["GROVM_HOME", "GROVM_SYMLINK"],
     "Node": ["NVM_HOME", "NVM_SYMLINK"],
     "Kubectl": ["KVM_HOME", "KVM_SYMLINK"],
-    "Maven": ["MVM_HOME", "MVM_SYMLINK"]
+    "Maven": ["MVM_HOME", "MVM_SYMLINK"],
+    "Python": ["PVM_HOME", "PVM_SYMLINK"]
 }
 
 support_components_matrix = {}
@@ -208,6 +209,9 @@ def show_help():
         if k in ["JAVA"]:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%\\bin` to env variable `PATH`. Alternatively you can set env variable `{}` for creating corresponding symlink and add `%{}%\\bin` to env variable `PATH`"
                   .format(k, v[0], v[1], v[1], v[2], v[2]))
+        elif k == "Python":
+            print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` to create symlink and add `%{}%` to env variable `PATH` for `python` command and add `%{}%\\Scripts` to env variable `PATH` for `pip` command"
+                  .format(k, v[0], v[1], v[1], v[1]))
         elif k in ["Gradle", "Maven", "Groovy"]:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%\\bin` to env variable `PATH`."
                   .format(k, v[0], v[1], v[1]))
