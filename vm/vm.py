@@ -5,7 +5,7 @@ import os
 import pathlib
 import sys
 
-build_version = "v1.0.1"
+build_version = "v1.0.2"
 github = "https://github.com/Kelcin2/vm"
 support_components = {
     "JAVA": ["JVM_HOME", "JVM_SYMLINK", "JRE_SYMLINK"],
@@ -14,6 +14,7 @@ support_components = {
     "Node": ["NVM_HOME", "NVM_SYMLINK"],
     "Kubectl": ["KVM_HOME", "KVM_SYMLINK"],
     "Maven": ["MVM_HOME", "MVM_SYMLINK"],
+    "Protoc": ["PROVM_HOME", "PROVM_SYMLINK"],
     "Python": ["PVM_HOME", "PVM_SYMLINK"]
 }
 
@@ -212,7 +213,7 @@ def show_help():
         elif k == "Python":
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` to create symlink and add `%{}%` to env variable `PATH` for `python` command and add `%{}%\\Scripts` to env variable `PATH` for `pip` command"
                   .format(k, v[0], v[1], v[1], v[1]))
-        elif k in ["Gradle", "Maven", "Groovy"]:
+        elif k in ["Gradle", "Maven", "Groovy", "Protoc"]:
             print("    To switch {} version freely, you MUST set env variable `{}` for fetching versions, set `{}` for creating symlink and add `%{}%\\bin` to env variable `PATH`."
                   .format(k, v[0], v[1], v[1]))
         else:

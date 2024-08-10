@@ -37,4 +37,5 @@ All Components Supported by Version Management
 | Node  | ``NVM_HOME`` ``NVM_SYMLINK`` | N/A |
 | Kubectl  | ``KVM_HOME`` ``KVM_SYMLINK`` | N/A |
 | Maven  | ``MVM_HOME`` ``MVM_SYMLINK`` | N/A |
+| Protoc  | ``PROVM_HOME`` ``PROVM_SYMLINK`` | N/A |
 | Python  | ``PVM_HOME`` ``PVM_SYMLINK`` | N/A |

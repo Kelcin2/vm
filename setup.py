@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vm',
-    version='v1.0.1',
+    version='v1.0.2',
     description='A Project for Version Management',
     author='Kelcin',
     url='https://github.com/Kelcin2/vm',
